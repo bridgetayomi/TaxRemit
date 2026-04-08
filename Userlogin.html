@@ -1,0 +1,111 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css -->
+    
+    <link rel="stylesheet" href="/Styles.css/Style.css"/>
+    
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" 
+rel="stylesheet">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/Img/Favicon.svg" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="../../Styles/style.css" />
+    <title>TaxRemit</title>
+  </head>
+
+
+
+
+
+
+
+
+  <!-- LEFT PANEL -->
+  <aside class="left-panel">
+    
+    <div class="logo">
+      <img src="/Logo.svg" alt="">
+    </div>
+
+    <h2 class="panel-heading">Tax Remittance Made Easy for you</h2>
+
+    <div class="panel-image">
+      <img src="/Img/people.svg" alt="">
+    </div>
+  </aside>
+
+  <!-- RIGHT PANEL -->
+  <main class="right-panel">
+    <div class="form-section">
+      <h1 class="heading">Which best describes you?</h1>
+      <p class="subtext">Choose how you'll use TaxRemit.</p>
+
+
+
+      <div class="options">
+
+        <!-- Option 1 -->
+        <label class="option-card" for="individual">
+          <input type="radio" name="user-type" id="individual" value="individual"/>
+          <span class="radio-circle"></span>
+          <div class="option-text">
+            <strong>An individual</strong>
+            <span>Manage tax remittance across multiple teams or business units.</span>
+          </div>
+        </label>
+
+        <!-- Option 2 — selected by default -->
+        <label class="option-card selected" for="sme">
+          <input type="radio" name="user-type" id="sme" value="sme" checked/>
+          <span class="radio-circle"></span>
+          <div class="option-text">
+            <strong>I am a SME</strong>
+            <span>Create an account to issue invoices and file VAT for your business.</span>
+          </div>
+        </label>
+
+        <!-- Option 3 -->
+        <label class="option-card" for="consultant">
+          <input type="radio" name="user-type" id="consultant" value="consultant"/>
+          <span class="radio-circle"></span>
+          <div class="option-text">
+            <strong>I am a Tax Consultant</strong>
+            <span>File and manage VAT for clients from one dashboard.</span>
+          </div>
+        </label>
+
+      </div>
+
+      <button class="btn-login">Continue</button>
+
+      <p class="signup-text">Have an account? <a href="/Pages/Signin.html" class="link">Log in</a></p>
+    </div>
+  </main>
+
+  <!-- Help Button -->
+  <button class="help-btn" aria-label="Help">?</button>
+
+  <script>
+    const cards = document.querySelectorAll('.option-card');
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
